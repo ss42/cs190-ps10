@@ -20,7 +20,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9fV-rk-e7W">
                                 <rect key="frame" x="281" y="100" width="38" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GHl-ae-M7L">
@@ -35,19 +35,32 @@
                                     <segue destination="c61-ct-CNb" kind="unwind" unwindAction="back:" id="nVu-ti-nXG"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zwC-BW-0a4">
+                                <rect key="frame" x="45" y="331" width="510" height="147"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GHl-ae-M7L" firstAttribute="centerX" secondItem="yh9-TU-gcq" secondAttribute="centerX" id="5As-nQ-PPI"/>
                             <constraint firstItem="Fer-g2-jAN" firstAttribute="top" secondItem="GHl-ae-M7L" secondAttribute="bottom" constant="50" id="5yj-le-cUb"/>
+                            <constraint firstItem="zwC-BW-0a4" firstAttribute="top" secondItem="Fer-g2-jAN" secondAttribute="bottom" constant="50" id="9PU-US-8gt"/>
                             <constraint firstItem="9fV-rk-e7W" firstAttribute="centerX" secondItem="yh9-TU-gcq" secondAttribute="centerX" id="GdG-71-sM9"/>
+                            <constraint firstAttribute="trailing" secondItem="zwC-BW-0a4" secondAttribute="trailing" constant="45" id="R65-dd-3LN"/>
+                            <constraint firstItem="zwC-BW-0a4" firstAttribute="leading" secondItem="yh9-TU-gcq" secondAttribute="leading" constant="45" id="Sus-xl-fjf"/>
+                            <constraint firstItem="zwC-BW-0a4" firstAttribute="centerX" secondItem="yh9-TU-gcq" secondAttribute="centerX" id="TcS-PM-JTj"/>
                             <constraint firstItem="Fer-g2-jAN" firstAttribute="centerX" secondItem="yh9-TU-gcq" secondAttribute="centerX" id="eqH-qJ-tPg"/>
                             <constraint firstItem="GHl-ae-M7L" firstAttribute="top" secondItem="9fV-rk-e7W" secondAttribute="bottom" constant="50" id="hXw-G8-3CD"/>
                             <constraint firstItem="9fV-rk-e7W" firstAttribute="top" secondItem="gCz-b6-CNu" secondAttribute="bottom" constant="100" id="m7q-0f-LLH"/>
+                            <constraint firstItem="i1l-G1-40a" firstAttribute="top" secondItem="zwC-BW-0a4" secondAttribute="bottom" constant="58" id="mwz-eU-cH7"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
+                        <outlet property="displayErrorTextView" destination="zwC-BW-0a4" id="Npr-uM-1sp"/>
                         <outlet property="titleTextField" destination="GHl-ae-M7L" id="1Az-Wz-f6P"/>
                         <outlet property="view" destination="yh9-TU-gcq" id="Ecy-aV-iQ5"/>
                     </connections>
